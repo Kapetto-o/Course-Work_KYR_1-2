@@ -1,0 +1,256 @@
+$Twhite: RGB(252, 252, 252);    // fcfcfc
+$Tgrey: RGB(120,120,120);       // 787878
+$Tyellow: RGB(229, 232, 10);    // E5E80A
+$Tblack: RGB(53, 53, 53);       // 353535
+$Tgreen: (
+  0: RGB(26, 88, 50),    // 1a5832
+  1: RGB(56, 122, 43),   // 387a2b
+  2: RGB(86, 157, 36),   // 569d24
+  3: RGB(117, 192, 29)   // 75c01d
+);
+main {
+    .content {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: center;
+        .product_main-taitle {
+            font-weight: 900;
+            font-size: 40px;
+            letter-spacing: 0.06em;
+            color: map-get($map: $Tgreen, $key: 0);
+        }
+        .product_container {
+            display: flex;
+            gap: 2%;
+            .container-img {
+                display: flex;
+                flex: 1 0 35%;
+                max-width: 35%;
+                border: 3px solid map-get($map: $Tgreen, $key: 0);
+                border-radius: 20px;
+                overflow: hidden;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                img {
+                    max-height: 400px;
+                }
+            }
+            .mini-characteristic_container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                flex: 2;
+                .element {
+                    display: flex;
+                    .name, .meaning {
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
+                    .name {
+                        color: $Tgrey;
+                        flex: 1 0 60%;
+                    }
+                    .meaning {
+                        color: $Tblack;
+                        flex: 1 0 40%;
+                    }
+                }
+                .full-characteristics {
+                    a {
+                        font-weight: 700;
+                        font-size: 20px;
+                        color: map-get($map: $Tgreen, $key: 2);
+                    }
+                    a:hover {
+                        text-decoration: underline !important;
+                    }
+                }
+            }
+            .product_payment {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+                .general-info {
+                    .price, .availability {
+                        font-weight: 900;
+                        letter-spacing: 0.06em;
+                    }
+                    .price {
+                        font-size: 50px;
+                        color: map-get($map: $Tgreen, $key: 0);
+                    }
+                    .availability {
+                        margin-top: 5px;
+                        font-size: 20px;
+                        color: $Tgrey;
+                    }
+                }
+                .buy {
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 20px;
+                    gap: 10px;
+                    .buy_basket, .buy_click {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 50px;
+                        width: 100%;
+                        font-weight: 700;
+                        font-size: 25px;
+                    }
+                    .buy_basket {
+                        color: $Twhite;
+                        background: map-get($map: $Tgreen, $key: 0);
+                    }
+                    .buy_basket:hover {
+                        border: 3px solid map-get($map: $Tgreen, $key: 0);
+                        background: $Twhite;
+                        color: map-get($map: $Tgreen, $key: 0);
+                    }
+                    .buy_click {
+                        color: map-get($map: $Tgreen, $key: 0);
+                        background: $Twhite;
+                        border: 1px solid map-get($map: $Tgreen, $key: 0);
+                    }
+                    .buy_click:hover {
+                        border: 3px solid map-get($map: $Tgreen, $key: 0);
+                    }
+                }
+            }
+
+        }
+        .main-characteristics {
+            CHARACTERISTICS, MAIN_TAITLE, CHARACTERISTICS_CONTAINER, CONTAINER-SECTION, SECTION-TITLE, CONTAINER-ELEMENT, CHARACTERISTIC_NAME, MEANING {
+                display: block;
+            }
+            CHARACTERISTICS {
+                max-width: 750px;
+                MAIN_TAITLE {
+                    font-weight: 900;
+                    font-size: 40px;
+                    letter-spacing: 0.06em;
+                    color: map-get($map: $Tgreen, $key: 0);
+                }
+                CHARACTERISTICS_CONTAINER {
+                    margin: 30px 0;
+                    CONTAINER-SECTION {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 20px;
+                        SECTION-TITLE {
+                            margin-top: 20px;
+                            font-weight: 700;
+                            font-size: 30px;
+                            letter-spacing: 0.06em;
+                            color: map-get($map: $Tgreen, $key: 0);
+                        }
+                        CONTAINER-ELEMENT {
+                            display: flex;
+                            CHARACTERISTIC_NAME, MEANING {
+                                font-weight: 700;
+                                font-size: 20px;
+                            }
+                            CHARACTERISTIC_NAME {
+                                flex: 3;
+                                color: $Tgrey;
+                            }
+                            MEANING {
+                                flex: 2;
+                                color: map-get($map: $Tgreen, $key: 1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1000px) {
+    main {
+        .content {
+            .product_container {
+                .container-img {
+                    flex: 1 0 50%;
+                    max-width: 50%;
+                }
+                .mini-characteristic_container {
+                    display: none;
+                }
+                .product_payment {
+                    flex: 1 0 50%;
+                    max-width: 50%;
+                    .general-info {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    main {
+        .content {
+            padding: 0 5px;
+            .product_main-taitle {
+                font-size: 25px;
+                letter-spacing: 0;
+            }
+            .product_container {
+                flex-direction: column;
+                .container-img {
+                    flex: 1 0 100%;
+                    max-width: 100%;
+                }
+                .product_payment {
+                    flex: 1 0 100%;
+                    max-width: 100%;
+                    .general-info {
+                        .price, .availability {
+                            letter-spacing: 0;
+                        }
+                        .price {
+                            font-size: 40px;
+                            color: map-get($map: $Tgreen, $key: 0);
+                        }
+                        .availability {
+                            margin-top: 5px;
+                            font-size: 15px;
+                            color: $Tgrey;
+                        }
+                    }
+                    .buy {
+                        .buy_basket, .buy_click {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+            .main-characteristics {
+                CHARACTERISTICS {
+                    MAIN_TAITLE {
+                        font-size: 25px;
+                        letter-spacing: 0;
+                    }
+                    CHARACTERISTICS_CONTAINER {
+                        margin: 0;
+                        CONTAINER-SECTION {
+                            SECTION-TITLE {
+                                font-size: 20px;
+                                letter-spacing: 0;
+                            }
+                            CONTAINER-ELEMENT {
+                                CHARACTERISTIC_NAME, MEANING {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
