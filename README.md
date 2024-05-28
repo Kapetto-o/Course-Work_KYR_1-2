@@ -3,7 +3,7 @@
 # TechnoSphere - 2024
 TechnoSphere — это веб-сайт интернет-магазина бытовой техники в рамках курсового проекта второго семестра по дисциплине "Компьютерные Языки Разметки". 
 
-![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
+![Image alt](https://github.com/Kapetto-o/Course-Work_KYR_1-2/blob/main/Design/logotype/TechnoSphere-LOGO.png)
 
 Задачи проекта:
 * Создать прототипы и макеты страниц сайта с использованием графического редактора Figma ✔️
