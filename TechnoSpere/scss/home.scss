@@ -1,0 +1,181 @@
+$Twhite: RGB(252, 252, 252);    // fcfcfc
+$Tgrey: RGB(120,120,120);       // 787878
+$Tyellow: RGB(229, 232, 10);    // E5E80A
+$Tblack: RGB(53, 53, 53);       // 353535
+$Tgreen: (
+  0: RGB(26, 88, 50),    // 1a5832
+  1: RGB(56, 122, 43),   // 387a2b
+  2: RGB(86, 157, 36),   // 569d24
+  3: RGB(117, 192, 29)   // 75c01d
+);
+
+main {
+    .content {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: center;
+        .banner:hover {
+            border: 3px solid map-get($map: $Tgreen, $key: 0);
+        }
+        .advantages {
+            .advantages-list {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                .advantages-element {
+                    flex: 1 1 25%;
+                    max-width: 33%;
+                    display: flex;
+                    align-items: flex-start;
+                    padding: 0 5px;
+                    margin: 0 0 20px;
+                    .advantages__icon {
+                        margin-right: 5px;
+                        img {
+                            max-width: none;
+                        }
+                    }
+                    .advantages__info {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        .advantages__title, .advantages-element__info {
+                            margin-bottom: 5px;
+                            letter-spacing: 0.06em;
+                        }
+                        .advantages__title {
+                            font-weight: 900;
+                            font-size: 30px;
+                            color: map-get($map: $Tgreen, $key: 0);
+                        }
+                        .advantages-element__info {
+                            font-weight: 500;
+                            font-size: 20px;
+                            color: $Tblack;
+                        }
+                    }
+                }
+            }
+        }
+       .hot-prices {
+            .hot-prices__title {
+                font-weight: 900;
+                font-size: 36px;
+                color: map-get($map: $Tgreen, $key: 0);
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .hot-prices__container {
+                display: flex;
+                flex-direction: row; 
+                overflow-x: auto;
+                gap: 10px;
+                margin: 0 -20px;
+                .hot-prices__element {
+                    flex-shrink: 0;
+                    position: relative;
+                    border: 3px solid map-get($map: $Tgreen, $key: 0);
+                    border-radius: 20px;
+                    width: 380px;
+                    height: 380px;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    .hot-prices__img, .hot-prices__info {
+                        display: flex;
+                    }
+                    .hot-prices__img {
+                        width: 360px;
+                        height: 280px;
+                        overflow: hidden;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 10px;
+                        img {
+                            height: 310px;
+                            flex-shrink: 0;
+                            object-fit: cover;
+                        }
+                    }
+                    .hot-prices__info {
+                        flex-grow: 1;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        .hot-prices__name, .hot-prices__price {
+                            font-weight: 700;
+                            letter-spacing: 0.04em;
+                            color: map-get($map: $Tgreen, $key: 0);
+                            padding: 10px 10px;
+                        }
+                        .hot-prices__name {
+                            font-size: 24px;
+                        }
+                        .hot-prices__price {
+                            font-size: 36px;
+                        }
+                    }
+                }
+                .hot-prices__element:hover {
+                    border-width: 4px;
+                }
+            }
+       } 
+    }
+}
+@media (max-width: 1000px) {
+    main {
+        .content {
+            .banner {
+                margin: 0 -20px;
+                margin-top: -9px;
+            }
+            .advantages {
+                margin: 0 -15px;
+                .advantages-list {
+                    .advantages-element {
+                        flex: 1 1 50%;
+                        max-width: 100%;
+                        .advantages__info {
+                            .advantages__title {
+                                font-size: 25px;
+                            }
+                            .advantages-element__info {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .hot-prices__name, .hot-prices__price {
+        text-align: center;
+    }
+}
+@media (max-width: 768px) {
+    main {
+        .content {
+            .banner {
+                margin-top: -32px;
+            }
+            .advantages {
+                .advantages-list {
+                    .advantages-element {
+                        flex: 1 1 100%;
+                        max-width: 100%;
+                        .advantages__icon {
+                            min-width: 20%;
+                            img {
+                                width: 100%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
