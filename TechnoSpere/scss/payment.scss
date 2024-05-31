@@ -1,0 +1,135 @@
+$Twhite: RGB(252, 252, 252);    // fcfcfc
+$Tgrey: RGB(120,120,120);       // 787878
+$Tyellow: RGB(229, 232, 10);    // E5E80A
+$Tblack: RGB(53, 53, 53);       // 353535
+$Tgreen: (
+  0: RGB(26, 88, 50),    // 1a5832
+  1: RGB(56, 122, 43),   // 387a2b
+  2: RGB(86, 157, 36),   // 569d24
+  3: RGB(117, 192, 29)   // 75c01d
+);
+main {
+    .content {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        justify-content: center;
+        .banner:hover {
+            border: 3px solid map-get($map: $Tgreen, $key: 0);
+        }
+        .payment__main-title {
+            text-align: center;
+            font-weight: 900;
+            font-size: 36px;
+            letter-spacing: 0.06em;
+            color: map-get($map: $Tgreen, $key: 0);
+        }
+        .payment__container {
+            display: flex;
+            flex-direction: column;
+            margin: 0 15%;
+            gap: 20px;
+            .payment__container-element {
+                display: flex;
+                gap: 0.5%;
+                .element-icon {
+                    flex: 1 0 10%;
+                    min-width: 50px;
+                }
+                .element-info-container {
+                    .container-title, .container-info {
+                        font-weight: 900;
+                        letter-spacing: 0.06em;
+                    }
+                    .container-title {
+                        font-size: 26px;
+                        color: map-get($map: $Tgreen, $key: 0);
+                    }
+                    .container-info {
+                        font-size: 20px;
+                        color: $Tblack;
+                    }
+                }
+            }
+        }
+        .payment__guarantees-container {
+            margin: 0 20%;
+            .guarantees-title, .guarantees-punkt {
+                font-weight: 900;
+            }
+            .guarantees-title {
+                font-size: 26px;
+                color: map-get($map: $Tgreen, $key: 0);
+            }
+            .guarantees-punkt {
+                margin: 20px 0;
+                margin-left: 20px;
+                font-size: 20px;
+                color: $Tblack;
+                list-style-type: disc;
+            }
+            .guarantees-img {
+                display: flex;
+                justify-content: space-between;
+                img {
+                    flex: 1 0 30%;
+                    max-width: 40%;
+                    height: 100%;
+                    border: 3px solid map-get($map: $Tgreen, $key: 0);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1000px) {
+    main {
+        .content {
+            .banner {
+                margin: 0px -20px;
+                margin-top: -9px;
+            }
+            .payment__main-title {
+                font-size: 30px;
+            }
+            .payment__container {
+                margin: 0;
+                .container-title, .container-info {
+                    letter-spacing: 0;
+                }
+                .container-title {
+                    font-size: 21px;
+                }
+                .container-info {
+                    font-size: 15px;
+                }
+            }
+            .payment__guarantees-container {
+                margin: 0 10%;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    main {
+        .content {
+            .banner {
+                margin-top: -32px;
+            }
+            .payment__container {
+                margin: -15px;
+            }
+            .payment__guarantees-container {
+                margin: 0 1%;
+                .guarantees-img {
+                    flex-wrap: wrap;
+                    gap: 15px;
+                    justify-content: center;
+                    img {
+                        max-width: 60%;
+                    }
+                }
+            }
+        }
+    }
+}

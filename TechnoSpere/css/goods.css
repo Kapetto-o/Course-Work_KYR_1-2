@@ -1,0 +1,306 @@
+main .content {
+  padding: 15px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-content: center;
+}
+main .content .product_main-taitle {
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: 0.06em;
+  color: RGB(26, 88, 50);
+}
+main .content .product_container {
+  display: flex;
+  gap: 2%;
+}
+main .content .product_container .container-img {
+  display: flex;
+  flex: 1 0 35%;
+  max-width: 35%;
+  border: 3px solid RGB(26, 88, 50);
+  border-radius: 20px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+main .content .product_container .container-img img {
+  max-height: 400px;
+}
+main .content .product_container .mini-characteristic_container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 2;
+}
+main .content .product_container .mini-characteristic_container .element {
+  display: flex;
+}
+main .content .product_container .mini-characteristic_container .element .name, main .content .product_container .mini-characteristic_container .element .meaning {
+  font-weight: 700;
+  font-size: 20px;
+}
+main .content .product_container .mini-characteristic_container .element .name {
+  color: RGB(120, 120, 120);
+  flex: 1 0 60%;
+}
+main .content .product_container .mini-characteristic_container .element .meaning {
+  color: RGB(53, 53, 53);
+  flex: 1 0 40%;
+}
+main .content .product_container .mini-characteristic_container .full-characteristics a {
+  font-weight: 700;
+  font-size: 20px;
+  color: RGB(86, 157, 36);
+}
+main .content .product_container .mini-characteristic_container .full-characteristics a:hover {
+  text-decoration: underline !important;
+}
+main .content .product_container .product_payment {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+main .content .product_container .product_payment .general-info .price, main .content .product_container .product_payment .general-info .availability {
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+main .content .product_container .product_payment .general-info .price {
+  font-size: 50px;
+  color: RGB(26, 88, 50);
+}
+main .content .product_container .product_payment .general-info .availability {
+  margin-top: 5px;
+  font-size: 20px;
+  color: RGB(120, 120, 120);
+}
+main .content .product_container .product_payment .buy {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 10px;
+}
+main .content .product_container .product_payment .buy .buy_basket, main .content .product_container .product_payment .buy .buy_click {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 25px;
+}
+main .content .product_container .product_payment .buy .buy_basket {
+  color: RGB(252, 252, 252);
+  background: RGB(26, 88, 50);
+}
+main .content .product_container .product_payment .buy .buy_basket:hover {
+  border: 3px solid RGB(26, 88, 50);
+  background: RGB(252, 252, 252);
+  color: RGB(26, 88, 50);
+}
+main .content .product_container .product_payment .buy .buy_click {
+  color: RGB(26, 88, 50);
+  background: RGB(252, 252, 252);
+  border: 1px solid RGB(26, 88, 50);
+  cursor: pointer;
+}
+main .content .product_container .product_payment .buy .buy_click:hover {
+  border: 3px solid RGB(26, 88, 50);
+}
+main .content .buy_forma {
+  z-index: 999999;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  flex-direction: column;
+  background: RGB(252, 252, 252);
+  border: 3px solid RGB(26, 88, 50);
+  font-weight: 700;
+  color: RGB(26, 88, 50);
+  padding: 20px 20px;
+  width: 45%;
+  display: none;
+}
+main .content .buy_forma .buy-content .buy-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+main .content .buy_forma .buy-content .buy-header button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+main .content .buy_forma .buy-content .buy-header button svg path {
+  fill: RGB(120, 120, 120);
+}
+main .content .buy_forma .buy-content .buy-header button:hover svg path {
+  fill: RGB(26, 88, 50);
+}
+main .content .buy_forma .buy-content form .form-element {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+main .content .buy_forma .buy-content form .form-element input, main .content .buy_forma .buy-content form .form-element textarea {
+  margin: 10px 0;
+  border: 1px solid RGB(120, 120, 120);
+  font-size: 20px;
+  padding: 5px 20px;
+}
+main .content .buy_forma .buy-content form .form-element input {
+  height: 40px;
+}
+main .content .buy_forma .buy-content form .form-element textarea {
+  height: 100px;
+  resize: none;
+}
+main .content .buy_forma .buy-content form .form-element button {
+  border: 3px solid RGB(26, 88, 50);
+  background: RGB(26, 88, 50);
+  height: 50px;
+  width: 30%;
+  font-family: "Roboto";
+  font-weight: 700;
+  color: RGB(252, 252, 252);
+  font-size: 16px;
+  cursor: pointer;
+}
+main .content .buy_forma .buy-content form .form-element button:hover {
+  background: RGB(252, 252, 252);
+  color: RGB(26, 88, 50);
+}
+main .content .buy_forma .buy-content .buy_completed {
+  margin-top: 10px;
+  text-align: center;
+  display: none;
+}
+main .content .main-characteristics CHARACTERISTICS, main .content .main-characteristics MAIN_TAITLE, main .content .main-characteristics CHARACTERISTICS_CONTAINER, main .content .main-characteristics CONTAINER-SECTION, main .content .main-characteristics SECTION-TITLE, main .content .main-characteristics CONTAINER-ELEMENT, main .content .main-characteristics CHARACTERISTIC_NAME, main .content .main-characteristics MEANING {
+  display: block;
+}
+main .content .main-characteristics CHARACTERISTICS {
+  max-width: 750px;
+}
+main .content .main-characteristics CHARACTERISTICS MAIN_TAITLE {
+  font-weight: 900;
+  font-size: 40px;
+  letter-spacing: 0.06em;
+  color: RGB(26, 88, 50);
+}
+main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER {
+  margin: 30px 0;
+}
+main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER CONTAINER-SECTION {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER CONTAINER-SECTION SECTION-TITLE {
+  margin-top: 20px;
+  font-weight: 700;
+  font-size: 30px;
+  letter-spacing: 0.06em;
+  color: RGB(26, 88, 50);
+}
+main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER CONTAINER-SECTION CONTAINER-ELEMENT {
+  display: flex;
+}
+main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER CONTAINER-SECTION CONTAINER-ELEMENT CHARACTERISTIC_NAME, main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER CONTAINER-SECTION CONTAINER-ELEMENT MEANING {
+  font-weight: 700;
+  font-size: 20px;
+}
+main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER CONTAINER-SECTION CONTAINER-ELEMENT CHARACTERISTIC_NAME {
+  flex: 3;
+  color: RGB(120, 120, 120);
+}
+main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER CONTAINER-SECTION CONTAINER-ELEMENT MEANING {
+  flex: 2;
+  color: RGB(56, 122, 43);
+}
+
+@media (max-width: 1000px) {
+  main .content .product_container .container-img {
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+  main .content .product_container .mini-characteristic_container {
+    display: none;
+  }
+  main .content .product_container .product_payment {
+    flex: 1 0 50%;
+    max-width: 50%;
+  }
+  main .content .product_container .product_payment .general-info {
+    text-align: center;
+  }
+  main .content .buy_forma {
+    width: 80%;
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+}
+@media (max-width: 768px) {
+  main .content {
+    padding: 0 5px;
+  }
+  main .content .product_main-taitle {
+    font-size: 25px;
+    letter-spacing: 0;
+  }
+  main .content .product_container {
+    flex-direction: column;
+  }
+  main .content .product_container .container-img {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+  main .content .product_container .product_payment {
+    flex: 1 0 100%;
+    max-width: 100%;
+  }
+  main .content .product_container .product_payment .general-info .price, main .content .product_container .product_payment .general-info .availability {
+    letter-spacing: 0;
+  }
+  main .content .product_container .product_payment .general-info .price {
+    font-size: 40px;
+    color: RGB(26, 88, 50);
+  }
+  main .content .product_container .product_payment .general-info .availability {
+    margin-top: 5px;
+    font-size: 15px;
+    color: RGB(120, 120, 120);
+  }
+  main .content .product_container .product_payment .buy .buy_basket, main .content .product_container .product_payment .buy .buy_click {
+    font-size: 15px;
+  }
+  main .content .main-characteristics CHARACTERISTICS MAIN_TAITLE {
+    font-size: 25px;
+    letter-spacing: 0;
+  }
+  main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER {
+    margin: 0;
+  }
+  main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER CONTAINER-SECTION SECTION-TITLE {
+    font-size: 20px;
+    letter-spacing: 0;
+  }
+  main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER CONTAINER-SECTION CONTAINER-ELEMENT CHARACTERISTIC_NAME, main .content .main-characteristics CHARACTERISTICS CHARACTERISTICS_CONTAINER CONTAINER-SECTION CONTAINER-ELEMENT MEANING {
+    font-size: 15px;
+  }
+  main .content .buy_forma {
+    width: 94%;
+  }
+  main .content .buy_forma .buy-content form .form-element button {
+    width: 60%;
+  }
+}
