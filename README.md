@@ -1,4 +1,4 @@
-*#BSTU #KYR*
+*#BSTU #KYaR*
 
 # ТехноСфера - 2024
 ![Логотип ТехноСфера](https://github.com/Kapetto-o/Course-Work_KYR_1-2/blob/main/Design/logotype/TechnoSphere-TEXT-LOGO.png)
